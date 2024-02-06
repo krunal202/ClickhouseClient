@@ -147,7 +147,7 @@ class Result implements \ArrayAccess, \Iterator, \Countable
         return isset($this->rows[$offset]);
     }
 
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return $this->rows[$offset];
     }
@@ -166,7 +166,7 @@ class Result implements \ArrayAccess, \Iterator, \Countable
      * Iterator
      */
 
-    public function current()
+    public function current(): mixed
     {
         return $this->rows[$this->current];
     }
@@ -176,7 +176,7 @@ class Result implements \ArrayAccess, \Iterator, \Countable
         $this->current++;
     }
 
-    public function key()
+    public function key(): mixed
     {
         return $this->current;
     }
